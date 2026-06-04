@@ -1,0 +1,1 @@
+Always use "\n", not endl as it is faster. endl calls buffer flush every single time it is called.

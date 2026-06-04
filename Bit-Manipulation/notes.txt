@@ -1,0 +1,35 @@
+int: 32-bit
+long long: 64-bit
+____________________________________________________________________________________________________
+MASK:
+Suppose we have a binary: 00101001, and we have to do something (like checking, toggling, etc.) with 3rd bit startin from 0, from right we make a mask and do some operations (like AND, XOR, etc. ) to do our task.
+
+To do this our aim is to do it in O(1).
+
+Mask is like 1 at that position and 0 elsewhere
+in our case: 00001000.
+
+We make it by left shifting 1. (1<<3).
+____________________________________________________________________________________________________
+To check i-th bit.
+x & (1<<i) != 0.
+if true, means not zero, specifically 2^i. means bit is 1.
+if false, means zero. means bit is 1.
+____________________________________________________________________________________________________
+To set i-th bit.
+To make i-th bit 1 regardless of what it is.
+x = x | (1<<i).
+____________________________________________________________________________________________________
+Clear the i-th bit.
+To make i-th bit 0 regardless of what it is.
+x = x & ~(1<<i).
+____________________________________________________________________________________________________
+Toggle the i-th bit.
+1 to 0, 0 to 1.
+x = x ^ (1<<i).
+any n ^ 0 = n.
+and 1 ^ 1 = 0, 0 ^ 1 = 1.
+____________________________________________________________________________________________________
+Isolating the Lowest Set Bit.
+00101000 -> 00001000.
+x & -x.

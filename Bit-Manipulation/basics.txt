@@ -33,3 +33,25 @@ ________________________________________________________________________________
 Isolating the Lowest Set Bit.
 00101000 -> 00001000.
 x & -x.
+Think in 2's complement: -x = ~x+1 : 11010111 + 1 : 11011000 at lowest set bit, it keeps it same right of that all zero as before and left all toggled so and & gives only desired bit mask.
+____________________________________________________________________________________________________
+Check Power of 2
+x & x-1 == 0 (x>0).
+let x: 00001000
+so x-1: 00000111
+& always gives 0.
+____________________________________________________________________________________________________
+Popcount
+count set bits.
+__builtin_popcount(x) 32 bit int
+__builtin_popcountll(x) 64 bit int
+
+Brian-Kernighan Trick.
+int count=0;
+while(n!=0){
+    n = n & (n-1)
+    count++;
+}
+____________________________________________________________________________________________________
+n+1 : convert all trailing 1's to 0 and rightmost 0 to 1.
+n-1 : convert all trailing 0's to 1 and rightmost 1 to 0.

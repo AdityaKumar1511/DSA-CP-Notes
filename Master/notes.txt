@@ -1,1 +1,18 @@
 Always use "\n", not endl as it is faster. endl calls buffer flush every single time it is called.
+____________________________________________________________________________________________________
+?? Whenever to print till specific decimal points.
+?? Only setprecision counts significant digits and also convert to scientific(in terms of e if want)
+?? So use fixed and setprecision in pair.
+
+double pi = 3.141592653589793;
+    cout << pi << "\n"; // Outputs: 3.14159 (DEFAULT)
+
+    // Set to exactly 2 decimal places
+    cout << fixed << setprecision(2) << pi << "\n"; // Outputs: 3.14
+
+    // Set to exactly 4 decimal places (It rounds the last digit!)
+    cout << fixed << setprecision(4) << pi << "\n"; // Outputs: 3.1416
+____________________________________________________________________________________________________
+In CP runtime is one second standard CPU 10^8 instr/sec so on T.C. check that it should be less than
+10^8.
+____________________________________________________________________________________________________

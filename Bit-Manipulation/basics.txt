@@ -46,6 +46,9 @@ count set bits.
 __builtin_popcount(x) 32 bit int
 __builtin_popcountll(x) 64 bit int
 
+__builtin_clz(x): Counts leading zeros in a binary representation.
+__builtin_ctz(x): Counts trailing zeros.
+
 Brian-Kernighan Trick.
 int count=0;
 while(n!=0){

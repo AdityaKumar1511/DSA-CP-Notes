@@ -55,6 +55,15 @@ while(n!=0){
     n = n & (n-1)
     count++;
 }
+
+vector<int> countBits(int n) {
+    vector<int> ans(n+1);
+    ans[0] = 0;
+    for(int i=1; i<n+1; i++){
+        ans[i] = ans[i/2] + i%2;
+    }
+    return ans;
+}
 ____________________________________________________________________________________________________
 n+1 : convert all trailing 1's to 0 and rightmost 0 to 1.
 n-1 : convert all trailing 0's to 1 and rightmost 1 to 0.

@@ -1,0 +1,7 @@
+To check the WA testcase to work upon as it isn't shown on CP platforms.
+
+Make these:
+1. generator.cpp
+2. brute.cpp
+3. solution.cpp
+4. stress.py
